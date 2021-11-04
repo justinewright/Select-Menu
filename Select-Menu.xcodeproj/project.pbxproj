@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		21748B8C27345DE700D5EFA7 /* Select_Menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 21748B8B27345DE700D5EFA7 /* Select_Menu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21748B932734637F00D5EFA7 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21748B922734637F00D5EFA7 /* String+Extension.swift */; };
+		21748B952734638C00D5EFA7 /* SelectableSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21748B942734638C00D5EFA7 /* SelectableSet.swift */; };
+		21748B972734639600D5EFA7 /* SelectMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21748B962734639600D5EFA7 /* SelectMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21748B8827345DE700D5EFA7 /* Select_Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Select_Menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21748B8B27345DE700D5EFA7 /* Select_Menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Select_Menu.h; sourceTree = "<group>"; };
+		21748B922734637F00D5EFA7 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		21748B942734638C00D5EFA7 /* SelectableSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableSet.swift; sourceTree = "<group>"; };
+		21748B962734639600D5EFA7 /* SelectMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				21748B8B27345DE700D5EFA7 /* Select_Menu.h */,
+				21748B922734637F00D5EFA7 /* String+Extension.swift */,
+				21748B942734638C00D5EFA7 /* SelectableSet.swift */,
+				21748B962734639600D5EFA7 /* SelectMenuViewModel.swift */,
 			);
 			path = "Select-Menu";
 			sourceTree = "<group>";
@@ -93,6 +102,7 @@
 				TargetAttributes = {
 					21748B8727345DE700D5EFA7 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -129,6 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21748B952734638C00D5EFA7 /* SelectableSet.swift in Sources */,
+				21748B932734637F00D5EFA7 /* String+Extension.swift in Sources */,
+				21748B972734639600D5EFA7 /* SelectMenuViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +273,7 @@
 		21748B9027345DE700D5EFA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -280,6 +294,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,6 +303,7 @@
 		21748B9127345DE700D5EFA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
