@@ -9,21 +9,13 @@ import XCTest
 
 class Select_MenuTests: XCTestCase {
 
-    class MockDelegate: SelectMenuViewModelDelegate {
-        var refreshViewCalled = false
-        func refreshView() {
-            refreshViewCalled = true
-        }
-    }
-    var mockDelegate = MockDelegate()
-
     var mockList: [SelectableSet] = [SelectableSet(id: "0", series: "series0", url: "", selected: false),
                                      SelectableSet(id: "1", series: "series1", url: "", selected: true)]
 
     var viewModelUnderTesting: SelectMenuViewModel!
 
     override func setUp() {
-        viewModelUnderTesting = SelectMenuViewModel(withDelegate: mockDelegate)
+        viewModelUnderTesting = SelectMenuViewModel()
     }
 
     func testViewModelOriginalListEmptyOnInitialization() {
@@ -137,15 +129,6 @@ class Select_MenuTests: XCTestCase {
         let expectedAddedItemsCount = 0
         let actualAddedItemsCount = viewModelUnderTesting.addedChanges
         XCTAssertEqual(expectedAddedItemsCount, actualAddedItemsCount)
-    }
-
-    func testWhenToggleIsCalledAndFailsThenDelegateRefreshViewIsNotCalled() {
-        viewModelUnderTesting.setList(withNewList: mockList)
-        mockDelegate.refreshViewCalled = false
-        viewModelUnderTesting.toggleItem(withId: "2")
-        let expectedResult = false
-        let actualResult = mockDelegate.refreshViewCalled
-        XCTAssertEqual(expectedResult, actualResult)
     }
 
 }
