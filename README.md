@@ -1,7 +1,7 @@
 # Select-Menu
-[![Version](https://img.shields.io/cocoapods/v/SelectMenu.svg?style=flat)](https://cocoapods.org/pods/TutSKImageExtension)
-[![License](https://img.shields.io/cocoapods/l/SelectMenu.svg?style=flat)](https://cocoapods.org/pods/TutSKImageExtension)
-[![Platform](https://img.shields.io/cocoapods/p/SelectMenu.svg?style=flat)](https://cocoapods.org/pods/TutSKImageExtension)
+[![Version](https://img.shields.io/cocoapods/v/SelectMenu.svg?style=flat)](https://cocoapods.org/pods/SelectMenu)
+[![License](https://img.shields.io/cocoapods/l/SelectMenu.svg?style=flat)](https://cocoapods.org/pods/SelectMenu)
+[![Platform](https://img.shields.io/cocoapods/p/SelectMenu.svg?style=flat)](https://cocoapods.org/pods/SelectMenu)
 
 ## Installation
 
