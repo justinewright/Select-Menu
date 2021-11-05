@@ -5,7 +5,7 @@
 
 ## Installation
 
-TutSKImageExtension is available through [CocoaPods](https://cocoapods.org). To install
+SelectMenu is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -18,4 +18,4 @@ justinewright, wright.justine21@gmail.com
 
 ## License
 
-TutSKImageExtension is available under the GNU license. See the LICENSE file for more info.
+SelectMenu is available under the GNU license. See the LICENSE file for more info.
