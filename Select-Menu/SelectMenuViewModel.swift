@@ -15,46 +15,46 @@ public class SelectMenuViewModel {
     // MARK: - Properties
     private(set) var differenceList: [Difference: [String : SelectableSet]] = [.added: [:], .removed: [:]]
     private(set) var originalList: [String: SelectableSet] = [:]
-    private (set) var searchList: [String] = []
+    private(set) public var searchList: [String] = []
 
     // MARK: - Computed Variables
-    var removedChanges: Int {
+    public var removedChanges: Int {
         return differenceList[.removed]?.count ?? 0
     }
 
-    var addedChanges: Int {
+    public var addedChanges: Int {
         return differenceList[.added]?.count ?? 0
     }
 
-    var totalChanges: Int {
+    public var totalChanges: Int {
         return removedChanges + addedChanges
     }
-    var addedSets: [String]? {
+    public var addedSets: [String]? {
         return differenceList[.added].map{ $0.map { $0.key}}
     }
 
-    var removedSets: [String]? {
+    public var removedSets: [String]? {
         return differenceList[.removed].map{ $0.map { $0.key}}
     }
 
     // MARK: - Filter Properties
-    var filteredList: [String] = []
-    var sets: [String: SelectableSet] {
+    public var filteredList: [String] = []
+    public var sets: [String: SelectableSet] {
         filteredList.isEmpty ? originalList :
         originalList.filter { filteredList.map{ $0.lastSubString }.contains($0.key) }
     }
-
     // MARK: - Initialization
+    public init () { }
 
-    func setList(withNewList list: [SelectableSet]) {
+    public func setList(withNewList list: [SelectableSet]) {
         originalList = Dictionary(uniqueKeysWithValues: list.map({($0.id, $0)}))
     }
 
-    func setSearchList(withSearchList list: [String]) {
+    public func setSearchList(withSearchList list: [String]) {
         searchList = list
     }
 
-    func toggleItem(withId itemID: String) {
+    public func toggleItem(withId itemID: String) {
         guard let _ = originalList[itemID] else {
             return
         }
@@ -66,7 +66,7 @@ public class SelectMenuViewModel {
         originalList[itemID]!.selected = !originalList[itemID]!.selected
     }
 
-    var keys: [String] {
+    public var keys: [String] {
         Array(sets.keys)
     }
 

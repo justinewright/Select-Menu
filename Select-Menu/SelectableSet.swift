@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct SelectableSet {
-    let id: String
-    let labelText: String
-    let imageUrl: String
-    var selected: Bool
+public struct SelectableSet {
+    public let id: String
+    public let labelText: String
+    public let imageUrl: String
+    public var selected: Bool
 
-    init (id: String, series: String, url: String, selected: Bool) {
+    public init (id: String, series: String, url: String, selected: Bool) {
         self.id = id
         self.labelText = series
         self.imageUrl = url
