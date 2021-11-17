@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SelectMenuViewModel {
+public class SelectMenuViewModel {
     enum Difference {
         case added
         case removed
